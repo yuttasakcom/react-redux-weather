@@ -1,13 +1,12 @@
-import { createStore, combineReducers } from 'redux'
+import { createStore, combineReducers, applyMiddleware } from 'redux'
+import ReduxPromise from 'redux-promise'
 
-import ReducerBooks from './books/reducers/reducer_books'
-import ReducerActiveBooks from './books/reducers/reducer_active_books'
+import WeatherReducer from './weathermap/reducers/reducer_weather'
 
 const reducers = combineReducers({
-    books: ReducerBooks,
-    activeBook: ReducerActiveBooks
+    weather: WeatherReducer
 })
 
-const store = createStore(reducers)
+const store = createStore(reducers, {}, applyMiddleware(ReduxPromise))
 
 export default store
