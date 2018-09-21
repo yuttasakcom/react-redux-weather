@@ -1,4 +1,4 @@
-# React-Redux-Book-Active
+# React-Redux-Weather
 
 ## Setup
 ```bash
